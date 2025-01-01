@@ -1,0 +1,82 @@
+# any empty lines and lines starting with '#' symbol are ignored
+#
+# The file should contain exactly two sections: router and link, each starting with the corresponding keyword
+#
+# router section defines topology nodes and their relative positions (e.g., to use in visualizer)
+router
+
+#can't see shit
+#name   city            latitude    longitude
+ATLAng  Atlanta_GA      33.850000   -84.483300
+CHINng  Chicago_IL      41.833300   -87.616700
+DNVRng  Denver_CO       40.750000   -105.000000
+HSTNng  Houston_TX      29.770031   -95.517364
+IPLSng  Indianapolis_IN 39.780622   -86.159535
+KSCYng  Kansas_City_MO  38.961694   -96.596704
+LOSAng  Los_Angeles_CA  34.050000   -118.250000
+NYCMng  New_York_NY     40.783300   -73.966700
+SNVAng  Sunnyvale_CA    37.38575    -122.02553
+STTLng  Seattle_WA      47.600000   -122.300000
+WASHng  Washington_DC   38.897303   -77.026842
+
+#better for showcasing doesn't have to change the size of the nodes manually
+#name   city            latitude    longitude
+#ATLAng  Atlanta_GA      3.385000   -8.448330
+#CHINng  Chicago_IL      4.183330   -8.761670
+#DNVRng  Denver_CO       4.075000   -10.500000
+#HSTNng  Houston_TX      2.977003   -9.551736
+#IPLSng  Indianapolis_IN 3.978062   -8.615954
+#KSCYng  Kansas_City_MO  3.896169   -9.659670
+#LOSAng  Los_Angeles_CA  3.405000   -11.825000
+#NYCMng  New_York_NY     4.078330   -7.396670
+#SNVAng  Sunnyvale_CA    3.738575   -12.202553
+#STTLng  Seattle_WA      4.760000   -12.230000
+#WASHng  Washington_DC   3.889730   -7.702684
+
+
+
+
+
+# Note that `node` can be any string. It is possible to access to the node by name using Names::Find, see examples.
+
+# link section defines point-to-point links between nodes and characteristics of these links
+link
+
+#x          y           capacity (kbps)
+#ATLAng      HSTNng      19000000
+#ATLAng      IPLSng      19000000
+#ATLAng      WASHng      19000000
+#CHINng      IPLSng      19000000
+#CHINng      NYCMng      19000000
+#DNVRng      KSCYng      19000000
+#DNVRng      SNVAng      19000000
+#DNVRng      STTLng      19000000
+
+#x          y           capacity (kbps)
+# Link connections
+ATLAng      HSTNng      19000000
+ATLAng      IPLSng      19000000
+ATLAng      WASHng      19000000
+ATLAng      KSCYng      19000000
+
+CHINng      IPLSng      19000000
+CHINng      NYCMng      19000000
+
+DNVRng      KSCYng      19000000
+DNVRng      SNVAng      19000000
+DNVRng      STTLng      19000000
+
+HSTNng      KSCYng      19000000
+HSTNng      DNVRng      19000000
+HSTNng      LOSAng      19000000
+
+IPLSng      WASHng      19000000
+IPLSng      CHINng      19000000
+IPLSng      KSCYng      19000000
+
+LOSAng      SNVAng      19000000
+LOSAng      HSTNng      19000000
+
+NYCMng      WASHng      19000000
+
+SNVAng      STTLng      19000000
